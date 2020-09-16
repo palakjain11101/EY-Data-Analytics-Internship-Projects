@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 import pandas as pd
 import numpy as np
 from openpyxl import load_workbook
@@ -49,10 +46,7 @@ for i in range(len(dfs['Mandatory'])):
 df.to_excel(r'C:\Users\vyshnavi.garimella\Desktop\newdata.xlsx')
 
 
-# In[ ]:
 
-
-import pandas as pd
 file_name = r'C:\Users\Palak\Desktop\G-Tubes_1.xlsx'
 sheet_name = 'Materials'
 df = pd.read_excel(file_name, sheet_name)
@@ -63,16 +57,11 @@ print(s)
 
 s.to_excel(r'C:\Users\Palak\Desktop\newdata1.xlsx')
 
-
-
-
 s5 = s[(s['UOM'] == "µm")]
 s5.to_excel(r'C:\Users\Palak\Desktop\newdata2.xlsx')
 
-
 s7 = s5.groupby('Template Object', as_index=False)['UOM'].count()
 s7.to_excel(r'C:\Users\Palak\Desktop\newdata5.xlsx')
-
 
 test_set = set(s5['Template Object'])
 # Creating a set using string 
@@ -88,7 +77,6 @@ s6 = s5.groupby('Template Object', as_index=False)['Target'].sum()
             
 s6['Target'] = s6['Target']/1000
 s6.to_excel(r'C:\Users\Palak\Desktop\newdata3.xlsx')
-
 
 df = pd.read_excel(r'C:\Users\Palak\Desktop\newdata.xlsx')
 for i in range(len(df['Template Object'])):
