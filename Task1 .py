@@ -65,7 +65,7 @@ s.to_excel(r'C:\Users\Palak\Desktop\newdata1.xlsx')
 
 
 
-import pandas as pd
+
 s5 = s[(s['UOM'] == "µm")]
 s5.to_excel(r'C:\Users\Palak\Desktop\newdata2.xlsx')
 
