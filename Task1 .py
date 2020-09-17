@@ -4,7 +4,7 @@
 import pandas as pd
 import numpy as np
 from openpyxl import load_workbook
-file_name = r'C:\Users\vyshnavi.garimella\Desktop\G-Tubes_1.xlsx'
+file_name = r'C:\Users\Palak\Desktop\G-Tubes_1.xlsx'
 sheet_name = 'Component Properties'
 dfs = pd.read_excel(file_name, sheet_name)
 df = pd.DataFrame(columns=['Template Object','Technology', 'Property', 'Range', 'Uom', 'Remarks'])
@@ -43,7 +43,7 @@ for i in range(len(dfs['Mandatory'])):
             df = df.append({'Template Object': dfs['Template Object'][i], 'Technology': dfs['Technology'][i], 'Property': dfs['Property'][i], 'Range': dfs['Target'][i], 'Uom': dfs['UOM'][i], 'Remarks': 'Anomaly'}, ignore_index=True)
        
     
-df.to_excel(r'C:\Users\vyshnavi.garimella\Desktop\newdata.xlsx')
+df.to_excel(r'C:\Users\Palak\Desktop\newdata.xlsx')
 
 
 
