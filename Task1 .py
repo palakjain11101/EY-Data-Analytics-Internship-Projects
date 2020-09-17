@@ -87,5 +87,4 @@ for i in range(len(df['Template Object'])):
                 print("hii")
                 df['Range'][i] = s6['Target'][j]
 df.to_excel(r'C:\Users\Palak\Desktop\newdata4.xlsx') 
-print("hiii")
 
